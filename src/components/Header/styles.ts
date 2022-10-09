@@ -19,7 +19,7 @@ const AnimeOverlay = keyframes`
 `
 
 // COMPONENTS - HEADER
-export const HeaderArea = styled.header`
+export const StyledHeaderArea = styled.header`
     width: 100%;
     position: sticky;
     top: 0;
@@ -43,7 +43,7 @@ export const HeaderArea = styled.header`
         }
     }
 `
-export const HeaderContent = styled.div`
+export const StyledHeaderContent = styled.div`
     max-width: 75rem;
     margin: 0 auto;
     padding: 1.5rem;
@@ -51,10 +51,10 @@ export const HeaderContent = styled.div`
     align-items: center;
     justify-content: space-between;
 `
-export const HeaderLogo = styled.div`
+export const StyledHeaderLogo = styled.div`
 
 `
-export const HeaderNav = styled.div`
+export const StyledHeaderNav = styled.div`
     ul{
         display: flex;
         gap: 1.5rem;
@@ -66,21 +66,21 @@ export const HeaderNav = styled.div`
 `
 
 // COMPONENTS - HAMBURGER-MENU
-export const HbgMenuArea = styled.div`
+export const StyledHbgMenuArea = styled.div`
     display: none;
 
     @media (max-width:768px) {
         display: block;          
     }
 `
-export const HbgMenuIcon = styled.div`
+export const StyledHbgMenuIcon = styled.div`
     position: fixed;
     top: 0;
     right: 0;
     padding: 1.5rem;
     z-index: 100;
 `
-export const HbgMenuContent = styled.div`
+export const StyledHbgMenuContent = styled.div`
     position: fixed;
     right: 0;
     top: 0;    
@@ -118,7 +118,7 @@ export const HbgMenuContent = styled.div`
         justify-content: start;       
    }
 `
-export const HbgMenuOverlay = styled.div`
+export const StyledHbgMenuOverlay = styled.div`
     position: fixed;
     top: 0;
     left: 0;

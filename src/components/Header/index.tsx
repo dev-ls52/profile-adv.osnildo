@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { IoMdMenu, IoMdClose, IoMdHome, IoMdChatboxes, IoMdRibbon, IoMdPerson, IoMdListBox } from 'react-icons/io'
 
-import { HbgMenuArea, HbgMenuContent, HbgMenuIcon, HbgMenuOverlay, HeaderArea, HeaderContent, HeaderLogo, HeaderNav } from "./styles";
+import {
+    StyledHbgMenuArea, StyledHbgMenuContent, StyledHbgMenuIcon, StyledHbgMenuOverlay, StyledHeaderArea,
+    StyledHeaderContent, StyledHeaderLogo, StyledHeaderNav
+} from "./styles";
 
 export function Header() {
 
@@ -9,55 +12,80 @@ export function Header() {
 
     return (
         <>
-            <HeaderArea className="bgGreen">
-                <HeaderContent>
-                    <HeaderLogo>
+            <StyledHeaderArea className="bgGreen">
+                <StyledHeaderContent>
+                    <StyledHeaderLogo>
                         <a href="/" >Osnildo Reis Advocacia</a>
-                    </HeaderLogo>
-                    <HeaderNav>
+                    </StyledHeaderLogo>
+                    <StyledHeaderNav>
                         <nav>
                             <ul>
-                                <li><a href="#home">Início</a></li>
-                                <li><a href="#about">Sobre</a></li>
-                                <li><a href="#atuacao">Atuação</a></li>
-                                <li><a href="#profile">Dr. Osnildo</a></li>
-                                <li><a href="#contact">Contato</a></li>
+                                <li> <a href="#home">Início</a> </li>
+                                <li> <a href="#about">Sobre</a> </li>
+                                <li> <a href="#atuacao">Atuação</a> </li>
+                                <li> <a href="#profile">Dr. Osnildo</a> </li>
+                                <li> <a href="#contact">Contato</a> </li>
                             </ul>
                         </nav>
-                    </HeaderNav>
+                    </StyledHeaderNav>
 
 
                     {/* HamburgerMenu */}
-                    <HbgMenuArea>
-                        <HbgMenuIcon onClick={() => setHbgOpen(!hbgOpen)}>
+                    <StyledHbgMenuArea>
+                        <StyledHbgMenuIcon onClick={() => setHbgOpen(!hbgOpen)}>
                             {
                                 !hbgOpen ?
                                     <IoMdMenu size="1.5rem" />
                                     :
                                     <IoMdClose size="1.5rem" />
                             }
-                        </HbgMenuIcon>
+                        </StyledHbgMenuIcon>
                         {
                             !hbgOpen ?
                                 null :
                                 <>
-                                    <HbgMenuOverlay onClick={() => { setHbgOpen(false) }} />
-                                    <HbgMenuContent>
+                                    <StyledHbgMenuOverlay onClick={() => { setHbgOpen(false) }} />
+                                    <StyledHbgMenuContent>
                                         <nav>
-                                            <ul >
-                                                <li onClick={() => { setHbgOpen(false) }}><a href="#home"> <span><IoMdHome size="1.5rem" /></span> Início</a></li>
-                                                <li onClick={() => { setHbgOpen(false) }}><a href="#about"> <span><IoMdListBox size="1.5rem" /></span> Sobre</a></li>
-                                                <li onClick={() => { setHbgOpen(false) }}><a href="#atuacao"> <span><IoMdRibbon size="1.5rem" /></span> Atuação</a></li>
-                                                <li onClick={() => { setHbgOpen(false) }}><a href="#profile"><span><IoMdPerson size="1.5rem" /></span> Dr. Osnildo</a></li>
-                                                <li onClick={() => { setHbgOpen(false) }}><a href="#contact"> <span><IoMdChatboxes size="1.5rem" /></span> Contato</a></li>
+                                            <ul>
+                                                <li onClick={() => { setHbgOpen(false) }}>
+                                                    <a href="#home">
+                                                        <span><IoMdHome size="1.5rem" /></span>
+                                                        Início
+                                                    </a>
+                                                </li>
+                                                <li onClick={() => { setHbgOpen(false) }}>
+                                                    <a href="#about">
+                                                        <span><IoMdListBox size="1.5rem" /></span>
+                                                        Sobre
+                                                    </a>
+                                                </li>
+                                                <li onClick={() => { setHbgOpen(false) }}>
+                                                    <a href="#atuacao">
+                                                        <span><IoMdRibbon size="1.5rem" /></span>
+                                                        Atuação
+                                                    </a>
+                                                </li>
+                                                <li onClick={() => { setHbgOpen(false) }}>
+                                                    <a href="#profile">
+                                                        <span><IoMdPerson size="1.5rem" /></span>
+                                                        Dr. Osnildo
+                                                    </a>
+                                                </li>
+                                                <li onClick={() => { setHbgOpen(false) }}>
+                                                    <a href="#contact">
+                                                        <span><IoMdChatboxes size="1.5rem" /></span>
+                                                        Contato
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </nav>
-                                    </HbgMenuContent>
+                                    </StyledHbgMenuContent>
                                 </>
                         }
-                    </HbgMenuArea>
-                </HeaderContent>
-            </HeaderArea>
+                    </StyledHbgMenuArea>
+                </StyledHeaderContent>
+            </StyledHeaderArea>
         </>
     );
 }
