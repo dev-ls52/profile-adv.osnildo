@@ -1,13 +1,21 @@
 import styled, { keyframes } from "styled-components";
 
 // ANIMATIONS
-export const AnimationfromLeft = keyframes`
+const AnimationfromLeft = keyframes`
     0%{
         transform: translate3d(10rem, 0, 0);
     }
     100%{
         transform: translate3d(0, 0, 0);
     }    
+`
+const AnimeOverlay = keyframes`
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 `
 
 // COMPONENTS - HEADER
@@ -79,7 +87,7 @@ export const HbgMenuContent = styled.div`
     height: 100vh;
     background-color: var(--green);
     animation: .3s ${AnimationfromLeft};
-    padding: 4rem 1.5rem;
+    padding: 5rem 1.5rem;
     box-shadow: 0 0 .2rem 0 var(--yellow);
    
    ul{
@@ -87,11 +95,12 @@ export const HbgMenuContent = styled.div`
         flex-direction: column;
         gap: 1rem;
    }
-   ul li{        
-        width: 10rem;
-        height: 3rem;
-        border-radius: .5rem;
-        border: 1px solid var(--yellow);        
+   ul li{
+        width: 12rem;
+        height: 4rem;
+        border-radius: .25rem;
+        /* border: 1px solid var(--yellow); */
+        box-shadow: 0 0 .25rem .1rem rgba(0,0,0,.2);
    }
    ul li a{
         width: 100%;
@@ -103,6 +112,11 @@ export const HbgMenuContent = styled.div`
         font-weight: bold;
         gap: 1rem;        
    }
+   ul li a span{       
+        display: flex;
+        align-items: center;
+        justify-content: start;       
+   }
 `
 export const HbgMenuOverlay = styled.div`
     position: fixed;
@@ -112,4 +126,5 @@ export const HbgMenuOverlay = styled.div`
     width: 100vw;
     background-color: rgba(0,0,0,0.5);
     z-index: -1;
+    animation: .3s ${AnimeOverlay};
 `
