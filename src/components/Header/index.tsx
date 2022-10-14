@@ -22,7 +22,7 @@ export function Header() {
                             <ul>
                                 <li> <a href="#home">Início</a> </li>
                                 <li> <a href="#about">Sobre</a> </li>
-                                <li> <a href="#atuacao">Atuação</a> </li>
+                                <li> <a href="#acting">Atuação</a> </li>
                                 <li> <a href="#profile">Dr. Osnildo</a> </li>
                                 <li> <a href="#contact">Contato</a> </li>
                             </ul>
@@ -61,7 +61,7 @@ export function Header() {
                                                     </a>
                                                 </li>
                                                 <li onClick={() => { setHbgOpen(false) }}>
-                                                    <a href="#atuacao">
+                                                    <a href="#acting">
                                                         <span><IoMdRibbon size="1.5rem" /></span>
                                                         Atuação
                                                     </a>

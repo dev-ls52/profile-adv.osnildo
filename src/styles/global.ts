@@ -47,39 +47,24 @@ export const GlobalStyle = createGlobalStyle`
         cursor: not-allowed;
     }
 
+    /* SCROLL BAR */
     /* width */
     ::-webkit-scrollbar {
         width: 10px;    
     }
-
     /* Track */
     ::-webkit-scrollbar-track {
         background: #f1f1f1;         
-    }
-    
+    }    
     /* Handle */
     ::-webkit-scrollbar-thumb {
         background: #888; 
         border-radius: .3rem;
     }
-
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
         background: #555; 
     }
+
     
-    #imgTitle{
-       display: flex; 
-       height: 100%; 
-       width: 100%; 
-       align-items: center; 
-       padding-left: 16rem;
-    }
-
-    @media(max-width: 800px){
-        #imgTitle{
-            padding-left: 2rem;            
-        }
-    }
-
 `
