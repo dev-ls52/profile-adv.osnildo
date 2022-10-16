@@ -17,7 +17,15 @@ export const StyledSection = styled.section`
 
   &.normal {
     margin: 0 auto;    
-    background-color: var(--white);    
+    background-color: var(--white);
+  }
+
+  &.viewh {
+    height: 100vh;
+  }
+
+  &.vieww {
+    width: 100vw;
   }
 `;
 
