@@ -1,10 +1,11 @@
 {
-  "files": {
-    "main.js": "/profile-adv.osnildo/static/js/main.cb33df57.js",
-    "index.html": "/profile-adv.osnildo/index.html",
-    "main.cb33df57.js.map": "/profile-adv.osnildo/static/js/main.cb33df57.js.map"
-  },
-  "entrypoints": [
-    "static/js/main.cb33df57.js"
-  ]
+  "main.js": "profile-adv.osnildo/static/js/main.cf97d9bd.chunk.js",
+  "main.js.map": "profile-adv.osnildo/static/js/main.cf97d9bd.chunk.js.map",
+  "static/js/1.2666a201.chunk.js": "profile-adv.osnildo/static/js/1.2666a201.chunk.js",
+  "static/js/1.2666a201.chunk.js.map": "profile-adv.osnildo/static/js/1.2666a201.chunk.js.map",
+  "runtime~main.js": "profile-adv.osnildo/static/js/runtime~main.0e8ccccf.js",
+  "runtime~main.js.map": "profile-adv.osnildo/static/js/runtime~main.0e8ccccf.js.map",
+  "index.html": "profile-adv.osnildo/index.html",
+  "precache-manifest.45440addb45de6b0e4092e49ddff4da7.js": "profile-adv.osnildo/precache-manifest.45440addb45de6b0e4092e49ddff4da7.js",
+  "service-worker.js": "profile-adv.osnildo/service-worker.js"
 }
