@@ -13,11 +13,13 @@ export const StyledSection = styled.section`
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
+    margin-top: 2rem;
   }
 
   &.normal {
-    margin: 0 auto;    
+    margin: 0 auto;
     background-color: var(--white);
+
   }
 
   &.viewh {

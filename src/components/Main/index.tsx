@@ -1,6 +1,6 @@
 import React from "react";
-import { BsListCheck } from "react-icons/bs";
-import { TbMessageCircle } from "react-icons/tb";
+import { BsListCheck, BsTelephone } from "react-icons/bs";
+import { TbMail, TbMessageCircle } from "react-icons/tb";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { AiOutlineGlobal } from "react-icons/ai";
 
@@ -15,11 +15,19 @@ import {
   StyledMainCardContentLogo,
   StyledMainCardHeader,
   StyledMainColumn,
+  StyledMainContact,
+  StyledMainContactCard,
+  StyledMainContactCardContent,
+  StyledMainProfileCard,
+  StyledMainProfileCardContent,
+  StyledMainProfileCardLogo,
   StyledMainRow,
   StyledMainText,
 } from "./styles";
 
 export function Main() {
+  const perfilImage = require("../../assets/perfil.png");
+
   return (
     <StyledMain>
       <Section sid="backgroundImageFixed" sstyle="full">
@@ -115,9 +123,79 @@ export function Main() {
         </StyledMainColumn>
       </Section>
 
-      <Section sid="profile" sstyle="normal"></Section>
+      <Section sid="profile" sstyle="normal">
+        <StyledMainColumn>
+          <StyledMainCardHeader>ADVOGADO</StyledMainCardHeader>
+          <StyledMainText>Dr. Osnildo Oliveira Reis</StyledMainText>
+        </StyledMainColumn>
+        <StyledMainCard>
+          <StyledMainProfileCard>
+            <StyledMainRow>
+              <StyledMainProfileCardContent>
+                <label>
+                  <strong>Inscrito na OAB/SP através do nº 475.409</strong>
+                </label>
+                <StyledMainColumn>
+                  <p>
+                    Dr. Osnildo é especialista em Direito do Trabalho e Processo
+                    do Trabalho. Graduado pelo UNASP – Centro Universitário
+                    Adventista de São Paulo campus Engenheiro Coelho no ano de
+                    2020.
+                  </p>
+                  <p>
+                    Além disso, é pós-graduando em Gestão de Pessoas Por
+                    Competência pelo Centro Universitário Adventista de Ensino.
+                  </p>
+                  <p>
+                    Finalmente, Dr. Osnildo Reis atua de forma bastante
+                    especializada em ações trabalhistas e indenizatórias, tendo
+                    sido contratado por clientes de todo Brasil através de sua
+                    advocacia especializada.
+                  </p>
+                </StyledMainColumn>
+              </StyledMainProfileCardContent>
+              <StyledMainProfileCardLogo>
+                <img src={perfilImage} alt="" style={{ height: "100%" }} />
+              </StyledMainProfileCardLogo>
+            </StyledMainRow>
+          </StyledMainProfileCard>
+        </StyledMainCard>
+      </Section>
 
-      <Section sid="contact" sstyle="normal"></Section>
+      <Section sid="contact" sstyle="normal">
+        <StyledMainColumn>
+          <StyledMainCardHeader>CONTATO</StyledMainCardHeader>
+        </StyledMainColumn>
+        <StyledMainContact>
+          <a href="tel:+5519997021486">
+            <StyledMainContactCard>
+              <StyledMainContactCardContent>
+                <BsTelephone size={50} />
+                <label htmlFor="">TELEFONE</label>
+                <span>(19) 99702-1486</span>
+              </StyledMainContactCardContent>
+            </StyledMainContactCard>
+          </a>
+          <a href="mailto:advogadoosnildo.reis@gmail.com">
+            <StyledMainContactCard>
+              <StyledMainContactCardContent>
+                <TbMail size={50} />
+                <label htmlFor="">EMAIL</label>
+                <span>advogadoosnildo.reis@gmail.com</span>
+              </StyledMainContactCardContent>
+            </StyledMainContactCard>
+          </a>
+          <a href="https://www.instagram.com/osnildo.reisadvogado/" target="_blank" rel="noreferrer">
+            <StyledMainContactCard>
+              <StyledMainContactCardContent>
+                <AiOutlineGlobal size={50} />
+                <label htmlFor="">REDES SOCIAIS</label>
+                <span>advogadoosnildo.reis</span>
+              </StyledMainContactCardContent>
+            </StyledMainContactCard>
+          </a>
+        </StyledMainContact>
+      </Section>
     </StyledMain>
   );
 }
