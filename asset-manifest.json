@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.js": "/profile-adv.osnildo/static/js/main.a1c51477.js",
+    "main.js": "/profile-adv.osnildo/static/js/main.ee31a64a.js",
+    "static/media/perfil.png": "/profile-adv.osnildo/static/media/perfil.282f00a6909dc11b6791.png",
     "index.html": "/profile-adv.osnildo/index.html",
-    "main.a1c51477.js.map": "/profile-adv.osnildo/static/js/main.a1c51477.js.map"
+    "main.ee31a64a.js.map": "/profile-adv.osnildo/static/js/main.ee31a64a.js.map"
   },
   "entrypoints": [
-    "static/js/main.a1c51477.js"
+    "static/js/main.ee31a64a.js"
   ]
 }
