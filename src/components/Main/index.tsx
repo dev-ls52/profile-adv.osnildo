@@ -35,6 +35,8 @@ export function Main() {
   useEffect(() => {
     animeScroll();
     setTargets(document.querySelectorAll("[data-anime]"));
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function animeScroll() {   
