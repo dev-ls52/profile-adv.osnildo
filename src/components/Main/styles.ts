@@ -44,7 +44,8 @@ export const StyledMainCardContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 3rem;
+  padding: 3rem;  
+
   label {
     font-size: 1.3rem;
     text-align: justify;
@@ -56,6 +57,11 @@ export const StyledMainCardContent = styled.div`
   @media (max-width: 768px) {
     padding: 1.5rem;
   }
+
+  
+  
+
+
 `;
 
 export const StyledMainCardContentLogo = styled.div`
@@ -108,6 +114,7 @@ export const StyledMainContact = styled.div`
   flex-direction: row;
   gap: 1rem;
   padding: 2rem;
+  margin-bottom: 5rem;
 
   a {
     text-decoration: none;

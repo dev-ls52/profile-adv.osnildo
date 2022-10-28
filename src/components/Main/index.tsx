@@ -1,4 +1,3 @@
-import React from "react";
 import { BsListCheck, BsTelephone } from "react-icons/bs";
 import { TbMail, TbMessageCircle } from "react-icons/tb";
 import { HiOutlineUserGroup } from "react-icons/hi";
@@ -24,9 +23,35 @@ import {
   StyledMainRow,
   StyledMainText,
 } from "./styles";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export function Main() {
   const perfilImage = require("../../assets/perfil.png");
+
+  const [targets, setTargets] = useState<any>([]);
+  const animationClass = "animate";
+
+  useEffect(() => {
+    animeScroll();
+    setTargets(document.querySelectorAll("[data-anime]"));
+  }, []);
+
+  function animeScroll() {   
+    const windowTop = window.pageYOffset + (window.innerHeight * 3) / 4;
+    targets.forEach((target:any) => {
+      if (windowTop > target.offsetTop) {
+        target.classList.add(animationClass);
+      } else {
+        target.classList.remove(animationClass);
+      }
+    });
+  }
+
+  if (targets.length) {
+    window.addEventListener("scroll", animeScroll);
+  }
+
 
   return (
     <StyledMain>
@@ -38,7 +63,7 @@ export function Main() {
 
       <Section sid="about" sstyle="normal">
         <StyledMainCard>
-          <StyledMainCardContent>
+          <StyledMainCardContent data-anime="left">
             <StyledMainCardHeader>
               <div>SOBRE NÓS</div>
             </StyledMainCardHeader>
@@ -73,7 +98,7 @@ export function Main() {
               </p>
             </>
           </StyledMainCardContent>
-          <StyledMainCardContentLogo>
+          <StyledMainCardContentLogo data-anime="top">
             <LogoVerdeCortada size="20rem" />
           </StyledMainCardContentLogo>
         </StyledMainCard>
@@ -85,7 +110,7 @@ export function Main() {
           <StyledMainText>
             Nosso grande diferencial é o atendimento acolhedor
           </StyledMainText>
-          <StyledMainRow>
+          <StyledMainRow data-anime="bot" >
             <StyledMainActingCard>
               <BsListCheck size="3rem" />
               <h2>Nossas áreas de atuação</h2>
@@ -128,7 +153,7 @@ export function Main() {
           <StyledMainCardHeader>ADVOGADO</StyledMainCardHeader>
           <StyledMainText>Dr. Osnildo Oliveira Reis</StyledMainText>
         </StyledMainColumn>
-        <StyledMainCard>
+        <StyledMainCard data-anime="left">
           <StyledMainProfileCard>
             <StyledMainRow>
               <StyledMainProfileCardContent>
@@ -166,7 +191,7 @@ export function Main() {
         <StyledMainColumn>
           <StyledMainCardHeader>CONTATO</StyledMainCardHeader>
         </StyledMainColumn>
-        <StyledMainContact>
+        <StyledMainContact data-anime="bot">
           <a href="tel:+5519997021486">
             <StyledMainContactCard>
               <StyledMainContactCardContent>
@@ -185,7 +210,11 @@ export function Main() {
               </StyledMainContactCardContent>
             </StyledMainContactCard>
           </a>
-          <a href="https://www.instagram.com/osnildo.reisadvogado/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.instagram.com/osnildo.reisadvogado/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <StyledMainContactCard>
               <StyledMainContactCardContent>
                 <AiOutlineGlobal size={50} />

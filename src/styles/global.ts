@@ -66,5 +66,24 @@ export const GlobalStyle = createGlobalStyle`
         background: #555; 
     }
 
-    
-`
+
+
+    /* ANIMATION */
+  &[data-anime]{
+    opacity: 0;
+    transition: 2s;
+  }
+  &[data-anime="left"]{
+    transform: translate3d(-50px, 0, 0);    
+  }
+  &[data-anime="top"]{
+    transform: translate3d(0,-50px, 0);
+  }
+  &[data-anime="bot"]{
+    transform: translate3d(0, 50px,0);
+  }
+  &[data-anime].animate{   
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
