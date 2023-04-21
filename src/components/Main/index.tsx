@@ -1,4 +1,4 @@
-import { BsListCheck, BsTelephone } from "react-icons/bs";
+import { BsInstagram, BsListCheck, BsTelephone } from "react-icons/bs";
 import { TbMail, TbMessageCircle } from "react-icons/tb";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { AiOutlineGlobal } from "react-icons/ai";
@@ -219,8 +219,9 @@ export function Main() {
           >
             <StyledMainContactCard>
               <StyledMainContactCardContent>
-                <AiOutlineGlobal size={50} />
-                <label htmlFor="">REDES SOCIAIS</label>
+                <BsInstagram size={50} />
+                {/* <AiOutlineGlobal size={50} /> */}
+                <label htmlFor="">Instagram</label>
                 <span>advogadoosnildo.reis</span>
               </StyledMainContactCardContent>
             </StyledMainContactCard>

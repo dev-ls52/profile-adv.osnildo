@@ -71,7 +71,7 @@ export const GlobalStyle = createGlobalStyle`
     /* ANIMATION */
   &[data-anime]{
     opacity: 0;
-    transition: 2s;
+    transition: .7s;
   }
   &[data-anime="left"]{
     transform: translate3d(-50px, 0, 0);    

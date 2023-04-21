@@ -58,10 +58,6 @@ export const StyledMainCardContent = styled.div`
     padding: 1.5rem;
   }
 
-  
-  
-
-
 `;
 
 export const StyledMainCardContentLogo = styled.div`
